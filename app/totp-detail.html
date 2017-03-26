@@ -1,0 +1,18 @@
+<div>
+  <h2>Input to establish an OTP Account.</h2>
+  <h3>Snap with your phone camera using Google Authenticator, once satisfied
+    with the values.</h3>
+  <form>
+   <p>
+     <label for="org">Org</label>
+     <input id="org" data-ng-model="vm.org"></input>
+   </p>
+   <p>
+     <label for="account">Account</label>
+     <input id="account" data-ng-model="vm.account">
+   </p>
+ </form>
+ <qrcode data="{{vm.otpLink}}" href="{{vm.otpLink}}"></qrcode>
+
+ <button ng-click="vm.snapped()">I snapped this with Google Authenticator.</button>
+</div>
