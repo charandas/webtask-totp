@@ -1,0 +1,22 @@
+<div>
+  <form ng-submit="vm.verify(vm.otp)">
+   <h2>Lets verify OTPs work from the App.</h2>
+   <p>
+     <label for="otp">One Time Password</label>
+     <input id="otp" placeholder="6 character OTP" data-ng-required="true" data-ng-model="vm.otp" data-ng-maxlength="6" data-ng-minlength="6"></input>
+     <a class='btn-verify submit' ng-click="vm.verify(vm.otp)"><i class="fa fa-play" aria-hidden="true"></i></a>
+   </p>
+   <p ng-if="vm.verifying">
+     <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+     <span class="sr-only">Loading...</span>
+   </p>
+   <p ng-if="vm.didverify">
+     Succeeded <i class="fa fa-check-square"></i>
+     <span class="sr-only">Success</span>
+   </p>
+   <p ng-if="vm.ran && !vm.verifying && !vm.didverify">
+     Failed <i class="fa fa-exclamation-circle"></i>
+     <span class="sr-only">Failed</span>
+   </p>
+ </form>
+</div>

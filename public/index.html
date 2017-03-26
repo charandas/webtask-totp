@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+  <title>TOTP on Webtask</title>
+</head>
+<body id="app-container" unselectable="on" class="unselectable" ng-app="webtask-totp">
+  <script src="jspm_packages/system.js"></script>
+  <script src="jspm.config.js"></script>
+  <script src="dist/bundle.js"></script>
+  <script>
+    SystemJS.config({
+      production: true
+    });
+    System.import('app/main');
+  </script>
+  <ng-view />
+</body>
+</html>
