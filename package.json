@@ -9,7 +9,8 @@
       "public/jspm_packages"
     ],
     "globals": [
-      "SystemJS"
+      "SystemJS",
+      "BASE_URI"
     ]
   },
   "scripts": {
@@ -19,7 +20,7 @@
     "nodemon": "./node_modules/.bin/nodemon",
     "frontend-local": "jspm bundle app/main.js public/dist/bundle.js -wd",
     "build-prod": "webpack -d",
-    "deploy-webtask": "npm run build-prod && wt create build/$(node -e 'console.log(require(\"./package.json\").name)').js",
+    "deploy-webtask": "semistandard && npm run build-prod && wt create build/$(node -e 'console.log(require(\"./package.json\").name)').js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

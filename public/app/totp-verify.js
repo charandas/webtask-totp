@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from './axios';
 import get from 'lodash/get';
 
 export default function TotpVerifyController ($scope, $timeout) {

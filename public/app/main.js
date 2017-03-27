@@ -2,7 +2,7 @@ import angular from 'angular';
 import 'angular-route';
 import 'qrcode-generator';
 import ngQrcode from 'angular-qrcode';
-import axios from 'axios';
+import axios from './axios';
 import get from 'lodash/get';
 import 'components/font-awesome';
 
