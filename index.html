@@ -6,16 +6,7 @@
   <title>TOTP on Webtask</title>
 </head>
 <body id="app-container" unselectable="on" class="unselectable" ng-app="webtask-totp">
-  <script src="jspm_packages/system.js"></script>
-  <script src="jspm.config.js"></script>
-  <script src="dist/bundle.js"></script>
-  <script>
-    var BASE_URI = "https://wt-511d6c5e91afae05e2f1468adca2fdd5-0.run.webtask.io/webtask-totp";
-    SystemJS.config({
-      production: true
-    });
-    System.import('app/main');
-  </script>
+  <script src="dist/build.js"></script>
   <ng-view />
 </body>
 </html>
